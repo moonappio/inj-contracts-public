@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Array_of_UserInfoRes",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/UserInfoRes"
+  },
+  "definitions": {
+    "UserInfoRes": {
+      "type": "object",
+      "required": [
+        "address",
+        "allocation",
+        "received_amount",
+        "spent"
+      ],
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "allocation": {
+          "type": "integer",
+          "format": "uint128",
+          "minimum": 0.0
+        },
+        "received_amount": {
+          "type": "integer",
+          "format": "uint128",
+          "minimum": 0.0
+        },
+        "spent": {
+          "type": "integer",
+          "format": "uint128",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
